@@ -10,10 +10,6 @@ ARG GITHUB_TOKEN
 # make sure args are set
 RUN test -n "$GITHUB_ACTOR" && test -n "$GITHUB_TOKEN"
 
-# banstick
-# requires git for some reason
-RUN apk add --no-cache git
-
 WORKDIR /src
 ARG BANSTICK_VERSION="v2.0.0-SNAPSHOT-2"
 ARG BANSTICK_SHA256="cbde8d74dd2621191d5ff905413dc731f3c01074479826d0ddf2afab68283515  banstick.tar.gz"
