@@ -337,8 +337,8 @@ world-border-buffers:
     starting_radius: 9900
     #Center of the border
     center:
-      x: 0.0
-      z: 0.0
+      x: 0.5
+      z: 0.5
 
 # Set this to the unix timestamp in seconds when the activity feature is being added,
 # this is the time used when a player has not entered a region yet
