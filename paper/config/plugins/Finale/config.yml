@@ -37,17 +37,17 @@ cleanerCombat:
     y: 1.05
     z: 1.0
   attackerMotion: # modifies motion of attacker upon attacking.
-    x: 0.6
-    y: 1.0
-    z: 0.6
+    x: 0.0
+    y: 0.0
+    z: 0.0
   victimMotion: # modifies motion of victim upon getting hit.
-    x: 0.5
-    y: 0.5
-    z: 0.5
+    x: 0.0
+    y: 0.0
+    z: 0.0
   maxVictimMotion: # maximum motion of victim upon getting hit.
-    x: 10.0
-    y: 0.3
-    z: 10.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
     
 # gives full control over health / regen, default is full reversion to 1.8 mechanics
 foodHealthRegen:
