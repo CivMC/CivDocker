@@ -188,6 +188,33 @@ reinforcements:
     hit_points: 2000
     allowed_worlds:
       - world_nether
+  deepslate:
+    id: 7
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      type: DEEPSLATE
+    creation_effect:
+      type: PORTAL
+      speed: 0.8
+      particleCount: 200
+      offset: 0.0
+    damage_effect:
+      type: SMOKE_NORMAL
+      speed: 0.06
+      particleCount: 40
+      offset: 0
+    destruction_effect:
+      type: SMOKE_LARGE
+      speed: 0.04
+      particleCount: 80
+      offset: 0.0
+    mature_time: 5m
+    acid_time: 20m
+    acid_priority: 2
+    name: Stone
+    hit_points: 50
+    allowed_worlds:
+      - world
   bedrock:
     id: 10
     item:
