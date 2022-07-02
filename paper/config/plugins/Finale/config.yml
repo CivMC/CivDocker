@@ -4,51 +4,67 @@ alterAttack:
   speed: 1024
 #CombatTag player on login?
 ctpOnLogin: true
-  
 cleanerCombat:
   maxReach: 6.0
   cps:
     limit: 9
     counterInterval: 1000
   attackCooldownEnabled: false
-  sweepEnabled: false
+  sweepEnabled: true
   sprintResetEnabled: true # should the sprint of the attacker reset upon hitting the victim?
   waterSprintResetEnabled: false # should the sprint of the attacker reset upon hitting if they are in water?
   knockbackSwordsEnabled: true # should knockback swords work?
   sounds:
     weak: false
     strong: false
-    knockback: false
+    knockback: true
     crit: true
-  sprintMultiplier: # modifies knockback if the attacker is sprinting.
-    x: 2.3
-    y: 1.0
-    z: 2.3
-  knockbackMultiplier: # modifies knockback in general.
-    x: 1.2
-    y: 0.9
-    z: 1.2
-  waterKnockbackMultiplier: # modifies knockback if the victim is in water.
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  airKnockbackMultiplier: # modifies knockback if the victim is in the air
-    x: 1.0
-    y: 1.05
-    z: 1.0
+  knockbackLevelMultiplier: 1 # a constant to control the knockback sword level
+  normal:
+    groundModifier: # modifies knockback in general.
+      type: DIRECT # MULTIPLY or ADD or DIRECT
+      x: 6.0
+      y: 0.45
+      z: 6.0
+    airModifier: # modifies knockback if the victim is in the air.
+      type: DIRECT # MULTIPLY or ADD or DIRECT
+      x: 0.65
+      y: 0.35
+      z: 0.65
+    waterModifier: # modifies knockback if the victim is in water.
+      type: DIRECT # MULTIPLY or ADD or DIRECT
+      x: 1.35
+      y: 0.1
+      z: 1.35
+  sprint: # modifies knockback if the attacker is sprinting.
+    groundModifier: # modifies knockback in general.
+      type: DIRECT # MULTIPLY or ADD or DIRECT
+      x: 6.5
+      y: 1.0
+      z: 6.5
+    airModifier: # modifies knockback if the victim is in the air.
+      type: DIRECT
+      x: 0.85
+      y: 0.15
+      z: 0.85
+    waterModifier: # modifies knockback if the victim is in water.
+      type: DIRECT
+      x: 1.35
+      y: 0.1
+      z: 1.35
   attackerMotion: # modifies motion of attacker upon attacking.
-    x: 0.6
-    y: 1.0
-    z: 0.6
+    x: 0.15
+    y: 0.1
+    z: 0.15
   victimMotion: # modifies motion of victim upon getting hit.
-    x: 0.5
-    y: 0.5
-    z: 0.5
+    x: 0.0
+    y: 0.0
+    z: 0.0
   maxVictimMotion: # maximum motion of victim upon getting hit.
-    x: 10.0
-    y: 0.3
-    z: 10.0
-    
+    x: 0.1
+    y: 0.05
+    z: 0.1
+
 # gives full control over health / regen, default is full reversion to 1.8 mechanics
 foodHealthRegen:
   enabled: true
@@ -237,12 +253,12 @@ velocity:
 
 #The order in which modifiers are applied is: ALL, ARROW, POWER_ENCHANT, STRENGTH_EFFECT, SWORD, SHARPNESS_ENCHANT, CRIT
 #Note that these effects are applied after vanilla damage additions and before vanilla damage reductions
-damageModifiers: 
-#Decrease all damage by 20 % 
+damageModifiers:
+  #Decrease all damage by 20 %
   ALL:
-    multiplier: 0.8
+    multiplier: 0.85
     mode: DIRECT
-#Increase sword damage by 25 %
+  #Increase sword damage by 25 %
   SHARPNESS_ENCHANT:
     multiplier: 1.0
     mode: DIRECT
@@ -251,11 +267,11 @@ damageModifiers:
     multiplier: 1.0
   CRIT:
     mode: DIRECT
-    multiplier: 1.0
+    multiplier: 0.8
   STRENGTH_EFFECT:
     mode: DIRECT
-    multiplier: 1.0
-    
+    multiplier: 0.8
+
 invulTicksEnabled: false #disabled because currently it messes up invulnerability with other damage types
 invulnerableTicks:
   FIRE: 10
