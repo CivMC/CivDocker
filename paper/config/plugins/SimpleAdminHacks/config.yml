@@ -105,28 +105,6 @@ hacks:
       - UNLUCK
   DebugWand:
     enabled: true
-  DogFacts:
-    enabled: true
-    intervalTime: 15m
-    announcements:
-      #- '["",{"text":"[CivMC] ","color":"gold"},{"text":"Join the Official Discord at https://discord.gg/eXE8X9HkFF","color":"green","clickEvent":{"action":"open_url","value":"https://discord.gg/eXE8X9HkFF"}}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Visit our wiki at civwiki.org","color":"green","clickEvent":{"action":"open_url","value":"https://civwiki.org/wiki/Main_Page"}}]'
-      #- '["",{"text":"[CivMC] ","color":"gold"},{"text":"Check out the map at ccmap.github.io","color":"green","clickEvent":{"action":"open_url","value":"https://ccmap.github.io/"}}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Type /g ! to join global chat","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Type /vote to vote for CivMC and receive essence!","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"The message is a lie, there are no essence streaks","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Lodestones work as elevators, shift to go down and spacebar to go up. They can be made in the Iron Forge factory","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Do not put buttons or signs over an elevator - or it will be blocked and you will not be able to teleport back to that block!","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Consider donating to the server at patreon.com/civ_mc!","color":"green","clickEvent":{"action":"open_url","value":"https://www.patreon.com/civ_mc"}}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"All ores except coal and copper can spawn in big veins","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"All ores except diamond spawn randomly as you dig","color":"green"}]'
-      #- '["",{"text":"[CivMC] ","color":"gold"},{"text":"If you do not sleep, the phantoms will get you!","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Typing /config will let you adjust various settings","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Type /rb to see the crop information for the biome you are in","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Type /chunklimits to see the restrictions on how many blocks can be placed in a chunk","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"If you type /fm you can see all the types of factories you can make","color":"green"}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"Please review the server rules at reddit.com/r/civmc/wiki/rules","color":"green","clickEvent":{"action":"open_url","value":"https://www.reddit.com/r/civmc/wiki/rules"}}]'
-      - '["",{"text":"[CivMC] ","color":"gold"},{"text":"You may not give another player access to any of your accounts. If you share an account with a friend, you and that friend will be considered the same person.","color":"green"}]'
   ElytraFeatures:
     enabled: false
     # Whether Elytra flight should be outright disabled
@@ -325,6 +303,29 @@ hacks:
     # NOTE: See https://papermc.io/javadocs/paper/1.16/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
     # Note: You can also just state "ALL" for all spawn circumstances
     VILLAGER: ALL
+  DogFacts:
+    enabled: false
+    intervalTime: 15m
+    # Use https://webui.adventure.kyori.net/ to create wacky announcements!
+    announcements:
+      #- "<gold>[CivMC] <green>Join the Official Discord at <click:open_url:'https://discord.gg/eXE8X9HkFF'>https://discord.gg/eXE8X9HkFF</click>"
+      - "<gold>[CivMC] <green>Visit our wiki at <click:open_url:'https://civwiki.org/wiki/Main_Page'>civwiki.org</click>"
+      #- "<gold>[CivMC] <green>Check out the map at <click:open_url:'https://ccmap.github.io/'>ccmap.github.io</click>"
+      - "<gold>[CivMC] <green>Type /g ! to join global chat"
+      - "<gold>[CivMC] <green>Type /vote to vote for CivMC and receive essence!"
+      - "<gold>[CivMC] <green>The message is a lie, there are no essence streaks"
+      - "<gold>[CivMC] <green>Lodestones work as elevators, shift to go down and spacebar to go up. They can be made in the Iron Forge factory"
+      - "<gold>[CivMC] <green>Do not put buttons or signs over an elevator - or it will be blocked and you will not be able to teleport back to that block!"
+      - "<gold>[CivMC] <green>Consider donating to the server at <click:open_url:'https://www.patreon.com/civ_mc'>patreon.com/civ_mc</click>!"
+      - "<gold>[CivMC] <green>All ores except coal and copper can spawn in big veins"
+      - "<gold>[CivMC] <green>All ores except diamond spawn randomly as you dig"
+      #- "<gold>[CivMC] <green>If you do not sleep, the phantoms will get you!"
+      - "<gold>[CivMC] <green>Typing /config will let you adjust various settings"
+      - "<gold>[CivMC] <green>Type /rb to see the crop information for the biome you are in"
+      - "<gold>[CivMC] <green>Type /chunklimits to see the restrictions on how many blocks can be placed in a chunk"
+      - "<gold>[CivMC] <green>If you type /fm you can see all the types of factories you can make"
+      - "<gold>[CivMC] <green>Please review the server rules at <click:open_url:'https://www.reddit.com/r/civmc/wiki/rules'>reddit.com/r/civmc/wiki/rules</click>"
+      - "<gold>[CivMC] <green>You may not give another player access to any of your accounts. If you share an account with a friend, you and that friend will be considered the same person."
   Experimental:
     enabled: true
     combatspy: false
