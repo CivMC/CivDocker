@@ -38,3 +38,53 @@ factories:
       - smelt_smooth_red_sandstone
       - smelt_smooth_quartz
       - repair_stone_smelter
+  composter:
+    type: FCC
+    name: Composter
+    citadelBreakReduction: 1.0
+    setupcost:
+      composter:
+        material: COMPOSTER
+        amount: 32
+      iron:
+        material: IRON_INGOT
+        amount: 16
+    recipes:
+      - compost_seedsw
+      - compost_seedsb
+      - repair_composter
+      
+recipes:  
+  compost_seedsw:
+    production_time: 10s
+    name: Compost Wheat Seeds
+    type: PRODUCTION
+    input:
+      seedsw:
+        material: WHEAT_SEEDS
+        amount: 576
+    output:
+      compost:
+        material: BONE_BLOCK
+        amount: 16
+  compost_seedsb:
+    production_time: 10s
+    name: Compost Beetroot Seeds
+    type: PRODUCTION
+    input:
+      seedsb:
+        material: BEETROOT_SEEDS
+        amount: 576
+    output:
+      compost:
+        material: BONE_BLOCK
+        amount: 16
+  repair_composter:
+    production_time: 10s
+    name: Repair Composter
+    type: REPAIR
+    input:
+      composter:
+        material: COMPOSTER
+        amount: 4
+    health_gained: 10000
