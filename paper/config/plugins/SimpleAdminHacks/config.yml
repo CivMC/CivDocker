@@ -87,6 +87,9 @@ hacks:
       - <gold>Must've been a rough night o.o
       - <gold>Why does my entire body ache?
       - <gold>That <it>really<gold> hurt!
+  # Allows any player with the "simpleadmin.bedlocator" permission to request their bed location.
+  BedLocator:
+    enabled: false
   BeeKeeping:
     enabled: true
     # Value between 0 and 1 that determines the percentage chance that a bee will replace
@@ -423,7 +426,7 @@ hacks:
     witherGrief: false
     dragonGrief: true
     allowEnchantedApples: false
-    preventFallingThroughBedrock: true
+    preventFallingThroughBedrock: false
     # Disable the Bad Omen effect that player receive when killing pillager patrols
     badOmen: false
     #a list of materials players shouldn't be allowed to place at all
