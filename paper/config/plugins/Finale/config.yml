@@ -91,6 +91,10 @@ pearls:
 #but they wont be able to see a cooldown in chat anymore and sometimes it's a bit laggy
   setVanillaCooldown: false
   
+gappleCooldown:
+  enabled: true
+  cooldown: 10s
+  
 #allows adjusting the attack damage of any item by its spigot material identifier
 weaponModification:
   netheriteAxe:
