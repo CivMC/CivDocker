@@ -99,16 +99,16 @@ hacks:
     severStingerChance: 0.7
   BetterVehicles:
     enabled: true
-      return_vehicle_to_inventory_on_exit: true
-      garbage_collect_vehicle: true
-      #"drop_itemstack" or "remove"
-      garbage_collect_vehicle_strategy: drop_itemstack
-      max_vehicle_age_in_seconds: 3
-      # this interval should be no smaller than the max_vehicle_age_in_seconds value. Else vehicles WILL exceed
-      # the preset maximum age
-      gc_interval_in_ticks: 20
-      flush_record_interval_in_ticks: 200
-      persistence_file_path: plugins/SimpleAdminHacks/BetterVehicles.json  
+    return_vehicle_to_inventory_on_exit: true
+    garbage_collect_vehicle: true
+    #"drop_itemstack" or "remove"
+    garbage_collect_vehicle_strategy: drop_itemstack
+    max_vehicle_age_in_seconds: 3
+    # this interval should be no smaller than the max_vehicle_age_in_seconds value. Else vehicles WILL exceed
+    # the preset maximum age
+    gc_interval_in_ticks: 20
+    flush_record_interval_in_ticks: 200
+    persistence_file_path: plugins/SimpleAdminHacks/BetterVehicles.json  
   BuffSpanker:
     enabled: true
     # The list of PotionEffectType's that you do not wish players to receive.
