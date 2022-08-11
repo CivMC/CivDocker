@@ -97,6 +97,18 @@ hacks:
     # its stinger and thus die when successfully attacking an entity.
     # Default: 1.0 (100%)
     severStingerChance: 0.7
+  BetterVehicles:
+    enabled: true
+      return_vehicle_to_inventory_on_exit: true
+      garbage_collect_vehicle: true
+      #"drop_itemstack" or "remove"
+      garbage_collect_vehicle_strategy: drop_itemstack
+      max_vehicle_age_in_seconds: 3
+      # this interval should be no smaller than the max_vehicle_age_in_seconds value. Else vehicles WILL exceed
+      # the preset maximum age
+      gc_interval_in_ticks: 20
+      flush_record_interval_in_ticks: 200
+      persistence_file_path: plugins/SimpleAdminHacks/BetterVehicles.json  
   BuffSpanker:
     enabled: true
     # The list of PotionEffectType's that you do not wish players to receive.
@@ -466,6 +478,40 @@ hacks:
        - "If you would like to report hacks or glitches, please message the admins through subreddit modmail at reddit.com/r/CivMC\n\nDisclaimer: &2TangentialThreat&r is not staff and should not be trusted."
   InvControl:
     enabled: true
+  Limits:
+    enabled: true
+    chunk_limits:
+      cache_configuration:
+        # Capacity is elements, or complex objects, not bytes.
+        initial_capacity: 1000
+        maximum_capacity: 5000
+        expire_after_access_value: 15
+        expire_after_access_time_unit: MINUTES
+        # This will ensure that the entry is flushed after a certain time, to persist it.
+        expire_after_write_value: 2
+        expire_after_write_time_unit: HOURS
+
+      block_limits:
+# Limits are compounds. The following will allow at most 4 blocks of type piston and sticky piston in a chunk:
+#        - materials: [ PISTON, STICKY_PISTON ]
+#          max: 4
+# The next limit will limit the amount of pistons AND redstone blocks in a chunk:
+#        - materials: [ PISTON, REDSTONE_BLOCK ]
+#          max: 4
+# Both limits together allow at most 4 pistons, 4 sticky pistons and 4 red stone blocks.
+# These combinations are valid:
+# 1 piston, 3 sticky pistons, 3 redstone blocks.
+# 2 piston, 2 sticky pistons, 2 redstone blocks.
+# ...
+# 4 pistons, 0 sticky pistons, 0 redstone blocks.
+# 0 pistons, 4 sticky pistons, 4 redstone blocks
+# ...
+# Blocks in a list like this: [Stone, Glowstone] are summed and compared against the maximum.
+# For instance: [Stone, Glowstone] max: 1   will allow either a single stone, or a single glowstone.
+        - materials: [ PISTON, STICKY_PISTON ]
+          max: 4
+        - materials: [ PISTON, REDSTONE_BLOCK ]
+          max: 4
   NewfriendAssist:
     enabled: true
     announce: '&f%Player% is brand new!'
