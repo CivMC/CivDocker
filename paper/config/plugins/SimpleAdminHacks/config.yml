@@ -390,7 +390,7 @@ hacks:
   GameTuning:
     enabled: true
     chunkLimits:
-      enabled: true
+      enabled: false
       exceededMessage: '&9Limit (%Limit%) reached for this chunk, you cannot place more of this type of block (%Material%).'
       tileEntities:
         HOPPER: 16
@@ -512,6 +512,12 @@ hacks:
           max: 4
         - materials: [ PISTON, REDSTONE_BLOCK ]
           max: 4
+        - materials: [ ITEM_FRAME, GLOW_ITEM_FRAME ]
+          max: 10
+        - materials: [ FURNACE, BLAST_FURNACE ]
+          max: 10
+        - materials: [ CAMPFIRE, SOUL_CAMPFIRE ]
+          max: 10
   NewfriendAssist:
     enabled: true
     announce: '&f%Player% is brand new!'
