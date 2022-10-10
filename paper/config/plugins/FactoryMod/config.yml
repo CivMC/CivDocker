@@ -86,6 +86,7 @@ factories:
     recipes:
       - make_red_sand
       - clean_red_sand
+      - grind_deepslate
       - make_purpur
       - condense_purpur_fruit
       - make_prismarine_bricks
@@ -8669,3 +8670,15 @@ recipes:
             ds:
               enchant: DEPTH_STRIDER
               level: 3
+  grind_deepslate:
+    production_time: 4s
+    name: Grind Cobbled Deepslate
+    type: PRODUCTION
+    input:
+      deepslate:
+        material: COBBLED_DEEPSLATE
+        amount: 64
+    output:
+      gravel:
+        material: GRAVEL
+        amount: 64
