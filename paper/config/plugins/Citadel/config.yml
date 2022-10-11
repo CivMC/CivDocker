@@ -17,7 +17,7 @@ logMessages: true
 debug: true
 
 #Range in which entities are checked when redstone is involved in opening doors/trapdoors etc
-redstoneDistance: 6
+redstoneDistance: 7
 
 #Still used in calculating the localized decay. The difference is localized decay uses different last activity timers for each region. 
 global_decay_timer: 2 months
