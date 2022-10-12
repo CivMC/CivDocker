@@ -95,6 +95,12 @@ factories:
       - make_redstone_lamp
       - pack_ice
       - pack_blue_ice
+      - make_candles
+      - propogate_pickles
+      - make_endstone_bricks
+      - expose_copper
+      - weather_copper
+      - oxidise_copper
       - repair_aesthetics
   dye_wool:
     type: FCC
@@ -1813,6 +1819,120 @@ recipes:
       end_rod:
         material: END_ROD
         amount: 16
+  make_candles:
+    forceInclude: true
+    production_time: 4s
+    name: Make Candles
+    type: PRODUCTION
+    input:
+      wax:
+        material: HONEYCOMB
+        amount: 32
+      string:
+        material: STRING
+        amount: 4
+    output:
+      candles:
+        material: CANDLE
+        amount: 48
+  propogate_pickles:
+    forceInclude: true
+    production_time: 4s
+    name: Propogate Pickles
+    type: PRODUCTION
+    input:
+      sea_pickle:
+        material: SEA_PICKLE
+        amount: 32
+      bone_block:
+        material: BONE_BLOCK
+        amount: 4
+    output:
+      pickle_rick:
+        material: SEA_PICKLE
+        amount: 64
+  make_endstone_bricks:
+    forceInclude: true
+    production_time: 4s
+    name: Synthesise Endstone Bricks
+    type: PRODUCTION
+    input:
+      sandstone:
+        material: SANDSTONE
+        amount: 64
+      pearl:
+        material: ENDER_PEARL
+        amount: 1
+    output:
+      endstone_bricks:
+        material: END_STONE_BRICKS
+        amount: 64
+  expose_copper:
+    forceInclude: true
+    production_time: 4s
+    name: Expose Copper
+    type: PRODUCTION
+    input:
+      copper:
+        material: COPPER_BLOCK
+        amount: 64
+      water:
+        material: WATER_BUCKET
+        amount: 1
+      oxygen:
+        material: FLINT
+        amount: 4
+    output:
+      copper_exposed:
+        material: EXPOSED_COPPER
+        amount: 64
+      bucket_return:
+        material: BUCKET
+        amount: 1
+  weather_copper:
+    forceInclude: true
+    production_time: 4s
+    name: Weather Copper
+    type: PRODUCTION
+    input:
+      copper:
+        material: EXPOSED_COPPER
+        amount: 64
+      water:
+        material: WATER_BUCKET
+        amount: 1
+      oxygen:
+        material: FLINT
+        amount: 4
+    output:
+      copper_exposed:
+        material: WEATHERED_COPPER
+        amount: 64
+      bucket_return:
+        material: BUCKET
+        amount: 1
+  oxidise_copper:
+    forceInclude: true
+    production_time: 4s
+    name: Weather Copper
+    type: PRODUCTION
+    input:
+      copper:
+        material: WEATHERED_COPPER
+        amount: 64
+      water:
+        material: WATER_BUCKET
+        amount: 1
+      oxygen:
+        material: FLINT
+        amount: 4
+    output:
+      copper_exposed:
+        material: OXIDIZED_COPPER
+        amount: 64
+      bucket_return:
+        material: BUCKET
+        amount: 1
   make_redstone_lamp:
     forceInclude: true
     production_time: 4s
