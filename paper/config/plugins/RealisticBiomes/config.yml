@@ -508,11 +508,11 @@ plants:
   # formerly inheriting "basetree" properties
 
   OAK_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m
     name: Oak Tree
     id: 13
     grower:
-      type: tree
+      type: nmstree
       material: OAK_SAPLING
     vanilla_materials:
       - OAK_SAPLING
@@ -540,11 +540,11 @@ plants:
       end: 0.25
 
   BIRCH_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m
     name: Birch Tree
     id: 14
     grower:
-      type: tree
+      type: nmstree
       material: BIRCH_SAPLING
     vanilla_materials:
       - BIRCH_SAPLING
@@ -568,11 +568,11 @@ plants:
       temperate: 0.25
 
   SPRUCE_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m
     name: Spruce Tree
     id: 15
     grower:
-      type: tree
+      type: nmstree
       material: SPRUCE_SAPLING
     vanilla_materials:
       - SPRUCE_SAPLING
@@ -597,11 +597,11 @@ plants:
       mountain: 0.75
 
   JUNGLE_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m
     name: Jungle Tree
     id: 16
     grower:
-      type: tree
+      type: nmstree
       material: JUNGLE_SAPLING
     vanilla_materials:
       - JUNGLE_SAPLING
@@ -622,10 +622,10 @@ plants:
       hot_rainy: 1.0
 
   ACACIA_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m  
     name: Acacia Tree
     grower:
-      type: tree
+      type: nmstree
       material: ACACIA_SAPLING
     vanilla_materials:
       - ACACIA_SAPLING
@@ -651,10 +651,10 @@ plants:
       freshwater: 0.0
 
   DARK_OAK_SAPLING:
-    persistent_growth_period: 6h
+    persistent_growth_period: 1m
     name: Dark Oak Tree
     grower:
-      type: tree
+      type: nmstree
       material: DARK_OAK_SAPLING
     vanilla_materials:
       - DARK_OAK_SAPLING
