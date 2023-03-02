@@ -63,8 +63,8 @@ RECOVERYMESSAGE: "&cOops something went wrong... Putting you back in queue."
 # Note that the main server is always the one you log in to first
 # The main server is the one that has a queue to protect it
 # Make sure you set the default server in bungee config.yml correctly
-QUEUESERVER: "queue"
-MAINSERVER: "main"
+#QUEUESERVER: "queue"
+#MAINSERVER: "main"
 
 # Set this to true if you're a cracked/offline mode server.
 # It is recommended to have the AuthServer first option enabled otherwise people will go into the queue first
