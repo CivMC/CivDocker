@@ -93,6 +93,7 @@ factories:
       - make_sea_lantern
       - make_end_rods
       - make_redstone_lamp
+      - make_quartz_block
       - pack_ice
       - pack_blue_ice
       - repair_aesthetics
@@ -1693,6 +1694,21 @@ recipes:
     output:
       red_sand:
         material: RED_SAND
+        amount: 64
+  make_quartz_block:
+    production_time: 4s
+    name: Make Quartz Blocks
+    type: PRODUCTION
+    input:
+      bonemeal:
+        material: BONEMEAL
+        amount: 16
+      stone:
+        material: STONE
+        amount: 64
+    output:
+      quartz_block:
+        material: QUARTZ_BLOCK
         amount: 64
   clean_red_sand:
     forceInclude: true
