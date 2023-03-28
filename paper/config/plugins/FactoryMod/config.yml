@@ -1776,8 +1776,8 @@ recipes:
       prismarine:
         material: PRISMARINE
         amount: 64
-      ink:
-        material: INK_SAC
+      Black_dye:
+        material: BLACK_DYE
         amount: 4
     output:
       dark_prismarine:
