@@ -84,6 +84,8 @@ factories:
         material: BONE_MEAL
         amount: 32
     recipes:
+      - make_rooted_dirt
+      - make_coarse_dirt
       - make_red_sand
       - clean_red_sand
       - make_purpur
@@ -1678,6 +1680,36 @@ recipes:
     output:
       charcoal:
         material: CHARCOAL
+        amount: 64
+  make_rooted_dirt:
+    production_time: 4s
+    name: Make Rooted Dirt
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 64
+      seeds:
+        material: WHEAT_SEEDS
+        amount: 8
+    output:
+      coarse_dirt:
+        material: COARSE_DIRT
+        amount: 64
+  make_coarse_dirt:
+    production_time: 4s
+    name: Make Coarse Dirt
+    type: PRODUCTION
+    input:
+      dirt:
+        material: DIRT
+        amount: 64
+      gravel:
+        material: GRAVEL
+        amount: 8
+    output:
+      coarse_dirt:
+        material: COARSE_DIRT
         amount: 64
   make_red_sand:
     production_time: 4s
