@@ -37,6 +37,22 @@ factories:
       - smelt_red_sandstone
       - smelt_smooth_red_sandstone
       - repair_stone_smelter
+  grinding_mill:
+    type: FCC
+    name: Grinding mill
+    citadelBreakReduction: 1.0
+    setupcost:
+      flint:
+        material: FLINT
+        amount: 128
+    recipes:
+      - grind_stone
+      - grind_cobblestone
+      - grind_deepslate
+      _ grind_sandstone
+      = grind_terracotta
+      - grind_quartz
+      - repair_grinding_mill
   nether_smelter:
     type: FCC
     name: Nether Smelter
@@ -1040,6 +1056,66 @@ recipes:
       cracked_stone_bricks:
         material: CRACKED_STONE_BRICKS
         amount: 80
+  grind_stone:
+    production_time: 4s
+    name: Grind Stone
+    type: PRODUCTION
+    input:
+      stone:
+        material: STONE
+        amount: 64
+    output:
+      cobblestone:
+        material: COBBLESTONE
+        amount: 32
+  grind_cobblestone:
+    production_time: 4s
+    name: Grind Cobblestone
+    type: PRODUCTION
+    input:
+      Cobblestone:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      gravel:
+        material: GRAVEL
+        amount: 32
+  grind_deepslate:
+    production_time: 4s
+    name: Grind Deepslate
+    type: PRODUCTION
+    input:
+      deepslate:
+        material: DEEPSLATE
+        amount: 64
+    output:
+      cobbled_deepslate:
+        material: COBBLED_DEEPSLATE
+        amount: 32
+  grind_terracotta:
+    production_time: 4s
+    name: Grind Terracotta
+    type: PRODUCTION
+    input:
+      terracotta:
+        material: TERRACOTTA
+        amount: 64
+    output:
+      clay_ball:
+        material: CLAY_BALL
+        amount: 64
+  grind_sandstone:
+    production_time: 4s
+    name: Grind Sandstone
+    type: PRODUCTION
+    input:
+      sandstone:
+        material: SANDSTONE
+        amount: 64
+    output:
+      Sand:
+        material: SAND
+        amount: 64
   cook_beef:
     production_time: 4s
     name: Cook Beef
@@ -3729,6 +3805,15 @@ recipes:
       stone:
         material: STONE
         amount: 48
+    health_gained: 10000
+  repair_grinding_mill:
+    production_time: 4s
+    name: Repair Factory
+    type: REPAIR
+    input:
+      flint:
+        material: FLINT
+        amount: 64
     health_gained: 10000
   repair_nether_smelter:
     production_time: 4s
