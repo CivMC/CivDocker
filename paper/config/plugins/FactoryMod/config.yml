@@ -6257,6 +6257,13 @@ recipes:
         amount: 1
   wordbank_item:
     type: WORDBANK
+    fuel:
+      essence:
+        material: ENDER_EYE
+        amount: 1
+        name: Player Essence
+        lore:
+          - Activity reward used to fuel pearls
     name: Generate item name
     production_time: 4s
     word_count: 3
