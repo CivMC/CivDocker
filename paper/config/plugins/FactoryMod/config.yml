@@ -913,7 +913,6 @@ factories:
         material: PAPER
         amount: 64
     recipes:
-      - wordbank_item
       - bind_books
       - bind_writable_books
       - craft_printing_plate
@@ -924,7 +923,31 @@ factories:
       - repair_printer
       - craft_globe_banner_pattern
       - craft_piglin_banner_pattern
-      - craft_creeper_banner_pattern
+      - craft_creeper_banner_pattern   
+  research_station:
+    type: FCC
+    name: Research Station
+    citadelBreakReduction: 1.0
+    fuel:
+      fuelidentifier:
+      material: EXPERIENCE_BOTTLE
+      durability: 1
+    fuel_consumption_intervall: 2s
+    setupcost:
+      essence:
+        material: ENDER_EYE
+        amount: 48
+        name: Player Essence
+        lore:
+          - Activity reward used to fuel pearls
+      paper:
+        material: PAPER
+        amount: 64
+      ink:
+        material: INK_SAC
+        amount: 4
+    recipes:
+      - wordbank_item            
   concrete_mixer:
     type: FCC
     name: Concrete Mixer
