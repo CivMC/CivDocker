@@ -931,7 +931,6 @@ factories:
     fuel:
       fuelidentifier:
         material: EXPERIENCE_BOTTLE
-    fuel_consumption_intervall: 2s
     setupcost:
       essence:
         material: ENDER_EYE
@@ -6281,6 +6280,7 @@ recipes:
     type: WORDBANK
     name: Generate item name
     production_time: 4s
+    fuel_consumption_intervall: 2s
     word_count: 3
     seed: "{{ wordbank_seed }}"
     colors:
