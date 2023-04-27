@@ -930,8 +930,7 @@ factories:
     citadelBreakReduction: 1.0
     fuel:
       fuelidentifier:
-        material: EXPERIENCE_BOTTLE
-    fuel_consumption_intervall: 2s
+        material: EMERALD
     setupcost:
       essence:
         material: ENDER_EYE
