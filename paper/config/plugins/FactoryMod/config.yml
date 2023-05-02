@@ -945,7 +945,8 @@ factories:
         material: INK_SAC
         amount: 4
     recipes:
-      - wordbank_item            
+      - wordbank_item
+      - repair_station          
   concrete_mixer:
     type: FCC
     name: Concrete Mixer
@@ -6420,7 +6421,27 @@ recipes:
       paper:
         material: PAPER
         amount: 6
-    health_gained: 10000
+  health_gained: 10000
+  repair_station:     
+    forceInclude: true
+    type: REPAIR
+    name: Repair Station
+    production_time: 4s
+    fuel_consumption_intervall: 4s
+    input:
+      essence:
+        material: ENDER_EYE
+        amount: 8
+        name: Player Essence
+        lore:
+          - Activity reward used to fuel pearls
+      paper:
+        material: PAPER
+        amount: 16
+      ink:
+        material: INK_SAC
+        amount: 2
+  health_gained: 10000
   crack_fossil:
     type: RANDOM
     name: Crack Fossil
