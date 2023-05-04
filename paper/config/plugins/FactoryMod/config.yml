@@ -6421,7 +6421,7 @@ recipes:
       paper:
         material: PAPER
         amount: 6
-  health_gained: 10000
+    health_gained: 10000
   repair_station:     
     forceInclude: true
     type: REPAIR
@@ -6441,7 +6441,7 @@ recipes:
       ink:
         material: INK_SAC
         amount: 2
-  health_gained: 10000
+    health_gained: 10000
   crack_fossil:
     type: RANDOM
     name: Crack Fossil
