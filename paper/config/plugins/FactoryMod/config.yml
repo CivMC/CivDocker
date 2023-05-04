@@ -6410,9 +6410,8 @@ recipes:
         material: BUCKET
         amount: 1
   repair_printer:
-    forceInclude: true
     type: REPAIR
-    name: Repair Printer
+    name: Repair Factory
     production_time: 4s
     input:
       ink:
@@ -6423,9 +6422,8 @@ recipes:
         amount: 6
     health_gained: 10000
   repair_station:     
-    forceInclude: true
     type: REPAIR
-    name: Repair Station
+    name: Repair Factory
     production_time: 4s
     fuel_consumption_intervall: 4s
     input:
