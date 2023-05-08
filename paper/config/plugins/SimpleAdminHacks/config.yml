@@ -543,3 +543,8 @@ hacks:
   ToggleLamp:
     enabled: true
     cooldownTime: 100
+  OneTimeTeleport:
+    enabled: true
+    material_blacklist:
+      -  "obsidian"
+    ott_timeout: "2d" #Default is 2 days"
