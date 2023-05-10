@@ -548,5 +548,5 @@ hacks:
   OneTimeTeleport:
     enabled: true
     material_blacklist: []
-    unsafe_materials: [LAVA, WATER]
+    unsafe_materials: [LAVA, WATER, AIR]
     ott_timeout: 2d
