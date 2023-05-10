@@ -338,6 +338,8 @@ hacks:
     postteleport:
       spy: false
       count: 10
+  Fullbright:
+    enabled: false
   GameFeatures:
     enabled: true
     disablePotatoXP: false
@@ -541,10 +543,10 @@ hacks:
   TimingsHack:
     enabled: false
   ToggleLamp:
-    enabled: true
+    enabled: false
     cooldownTime: 100
   OneTimeTeleport:
     enabled: true
-    material_blacklist:
-      -  "obsidian"
-    ott_timeout: "2d" #Default is 2 days"
+    material_blacklist: []
+    unsafe_materials: [LAVA, WATER]
+    ott_timeout: 2d
