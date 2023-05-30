@@ -549,4 +549,4 @@ hacks:
     enabled: true
     material_blacklist: []
     unsafe_materials: [LAVA, WATER, AIR]
-    ott_timeout: 300d
+    ott_timeout: 3d
