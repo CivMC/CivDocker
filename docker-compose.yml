@@ -14,6 +14,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    environment:
+      CIV_POSTGRES_HOST: postgres
+      CIV_POSTGRES_USERNAME: postgres
+      CIV_POSTGRES_PASSWORD: postgres
     ports:
       - "25565:25577"
 
@@ -36,6 +40,7 @@ services:
       CIV_SERVER_NAME: local
 
       CIV_WORLD_GENERATOR: Terra:DEFAULT
+      CIV_WORDBANK_SEED: wordbank
 
       CIV_MYSQL_HOST: mariadb
       CIV_MYSQL_USERNAME: mariadb
@@ -50,23 +55,6 @@ services:
       CIV_RABBITMQ_PASSWORD: rabbitmq
     volumes:
       - ./local/paper:/data
-
-  queue:
-    build: queue
-    restart: unless-stopped
-    tty: true
-    stdin_open: true
-    environment:
-      INIT_MEMORY: 1G
-      MAX_MEMORY: 5G
-
-      CIV_SERVER_NAME: local-queue
-
-      CIV_POSTGRES_HOST: postgres
-      CIV_POSTGRES_USERNAME: postgres
-      CIV_POSTGRES_PASSWORD: postgres
-    volumes:
-      - ./local/queue:/data
 
   mariadb:
     image: mariadb:10.7.1

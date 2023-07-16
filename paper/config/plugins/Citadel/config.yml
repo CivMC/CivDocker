@@ -41,8 +41,8 @@ reinforcements:
       speed: 0.04
       particleCount: 80
       offset: 0.0
-    mature_time: 5m
-    acid_time: 20m
+    mature_time: 30m
+    acid_time: 30m
     acid_priority: 2
     name: Stone
     hit_points: 50
@@ -69,8 +69,8 @@ reinforcements:
       speed: 0.04
       particleCount: 80
       offset: 0.0
-    mature_time: 5m
-    acid_time: 20m
+    mature_time: 30m
+    acid_time: 30m
     acid_priority: 2
     name: Netherbrick
     hit_points: 50
@@ -97,7 +97,7 @@ reinforcements:
       speed: 0.13
       particleCount: 200
       offset: 0
-    mature_time: 30m
+    mature_time: 4h
     acid_time: 6h
     acid_priority: 5
     name: Iron
@@ -125,7 +125,7 @@ reinforcements:
       speed: 0.13
       particleCount: 200
       offset: 0
-    mature_time: 30m
+    mature_time: 4h
     acid_time: 6h
     acid_priority: 5
     name: Gold
@@ -153,8 +153,8 @@ reinforcements:
       speed: 0.5
       particleCount: 500
       offset: 0.1
-    mature_time: 4h
-    acid_time: 48h
+    mature_time: 12h
+    acid_time: 24h
     acid_priority: 10
     name: Diamond
     hit_points: 2000
@@ -181,8 +181,8 @@ reinforcements:
       speed: 0.5
       particleCount: 500
       offset: 0.1
-    mature_time: 4h
-    acid_time: 48h
+    mature_time: 12h
+    acid_time: 24h
     acid_priority: 10
     name: GildedBlackstone
     hit_points: 2000
@@ -343,6 +343,15 @@ reinforcement_damageMultiplier: 365
 world-border-buffers:
   #Has to be the world name
   world:
+    #'CIRCLE' or 'SQUARE' supported only
+    shape: CIRCLE
+    #Radius from border center you want the no reinforcement zone to kick in
+    starting_radius: 9900
+    #Center of the border
+    center:
+      x: 0.0
+      z: 0.0
+  world_nether:
     #'CIRCLE' or 'SQUARE' supported only
     shape: CIRCLE
     #Radius from border center you want the no reinforcement zone to kick in
