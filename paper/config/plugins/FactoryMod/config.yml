@@ -6549,7 +6549,7 @@ recipes:
         amount: 64
       honeycomb:
         material: HONEYCOMB
-        amount: 4
+        amount: 16
     output:
       waxed_copper_block:
         material: WAXED_COPPER_BLOCK
@@ -6564,7 +6564,7 @@ recipes:
         amount: 64
       honeycomb:
         material: HONEYCOMB
-        amount: 4
+        amount: 16
     output:
       waxed_exposed_copper:
         material: WAXED_EXPOSED_COPPER
@@ -6579,7 +6579,7 @@ recipes:
         amount: 64
       honeycomb:
         material: HONEYCOMB
-        amount: 4
+        amount: 16
     output:
       waxed_weathered_copper:
         material: WAXED_WEATHERED_COPPER
@@ -6594,7 +6594,7 @@ recipes:
         amount: 64
       honeycomb:
         material: HONEYCOMB
-        amount: 4
+        amount: 16
     output:
       waxed_oxidized_copper:
         material: WAXED_OXIDIZED_COPPER
@@ -6609,14 +6609,14 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 1
+        amount: 4
     output:
       exposed_copper:
         material: EXPOSED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 1
+        amount: 4
   weather_exposed_copper:
     production_time: 4s
     name: Weather Exposed Copper
@@ -6627,14 +6627,14 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 1
+        amount: 4
     output:
       weathered_copper:
         material: WEATHERED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 1
+        amount: 4
   weather_weathered_copper:
     production_time: 4s
     name: Weather Weathered Copper
@@ -6645,14 +6645,14 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 1
+        amount: 4
     output:
       oxidized_copper:
         material: OXIDIZED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 1
+        amount: 4
   repair_copper_workshop:
     production_time: 4s
     name: Repair Factory
