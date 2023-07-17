@@ -1051,6 +1051,9 @@ factories:
     type: FCC
     name: Copper Workshop
     citadelBreakReduction: 1.0
+    fuel:
+      fuelidentifier:
+        material: AMETHYST_SHARD
     setupcost:
       copper_block:
         material: COPPER_BLOCK
@@ -6609,16 +6612,16 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 4
+        amount: 1
     output:
       exposed_copper:
         material: EXPOSED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 4
+        amount: 1
   weather_exposed_copper:
-    production_time: 4s
+    production_time: 6s
     name: Weather Exposed Copper
     type: PRODUCTION
     input:
@@ -6627,16 +6630,16 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 4
+        amount: 1
     output:
       weathered_copper:
         material: WEATHERED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 4
+        amount: 1
   weather_weathered_copper:
-    production_time: 4s
+    production_time: 8s
     name: Weather Weathered Copper
     type: PRODUCTION
     input:
@@ -6645,14 +6648,14 @@ recipes:
         amount: 64
       water_bucket:
         material: WATER_BUCKET
-        amount: 4
+        amount: 1
     output:
       oxidized_copper:
         material: OXIDIZED_COPPER
         amount: 64
       bucket:
         material: BUCKET
-        amount: 4
+        amount: 1
   repair_copper_workshop:
     production_time: 4s
     name: Repair Factory
