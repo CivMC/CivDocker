@@ -42,9 +42,9 @@ factories:
     name: Nether Smelter
     citadelBreakReduction: 1.0
     setupcost:
-      netherbrick:
-        material: NETHER_BRICK
-        amount: 512
+      netherbricks:
+        material: NETHER_BRICKS
+        amount: 128
     recipes:
       - smelt_netherrack
       - smelt_red_netherbrick
@@ -1618,14 +1618,14 @@ recipes:
     input:
       netherrack:
         material: NETHERRACK
-        amount: 64
+        amount: 32
       nether_wart:
         material: NETHER_WART
-        amount: 64
+        amount: 32
     output:
       red_netherbrick:
         material: RED_NETHER_BRICKS
-        amount: 32
+        amount: 64
   smelt_nether_quartz:
     production_time: 4s
     name: Smelt Nether Quartz
@@ -3856,9 +3856,9 @@ recipes:
     name: Repair Factory
     type: REPAIR
     input:
-      netherbrick:
-        material: NETHER_BRICK
-        amount: 48
+      netherbricks:
+        material: NETHER_BRICKS
+        amount: 12
     health_gained: 10000
   repair_charcoal_factory:
     production_time: 4s
