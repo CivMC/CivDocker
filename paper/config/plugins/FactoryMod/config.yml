@@ -926,7 +926,8 @@ factories:
       - repair_printer
       - craft_globe_banner_pattern
       - craft_piglin_banner_pattern
-      - craft_creeper_banner_pattern   
+      - craft_creeper_banner_pattern
+      - craft_thing_banner_pattern
   research_station:
     type: FCC
     name: Research Station
@@ -6526,6 +6527,24 @@ recipes:
       bucket:
         material: BUCKET
         amount: 1
+  craft_thing_banner_pattern:
+    type: PRODUCTION
+    name: Craft Thing Banner Pattern
+    production_time: 4s
+    input:
+      paper:
+        material: PAPER
+        amount: 1
+      gold_block:
+        material: GOLD_BLOCK
+        amount: 8
+      apple:
+        material: APPLE
+        amount: 1
+    output:
+      thing_banner_pattern:
+        material: THING_BANNER_PATTERN
+        amount: 1   
   repair_printer:
     forceInclude: true
     type: REPAIR
