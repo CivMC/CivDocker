@@ -1607,9 +1607,21 @@ recipes:
         material: NETHERRACK
         amount: 64
     output:
-      netherbrick:
+      netherbricks:
         material: NETHER_BRICKS
         amount: 64
+  make_nether_brick_fence:
+    production_time: 4s
+    name: Make Fences
+    type: PRODUCTION
+    input:
+      netherrack:
+        material: NETHERRACK
+        amount: 16
+    output:
+      fence:
+        material: NETHER_BRICK_FENCE
+        amount: 128
   smelt_red_netherbrick:
     forceInclude: true
     production_time: 4s
