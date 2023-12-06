@@ -181,7 +181,7 @@ hacks:
     disableEndGatewayTP: false
   ItemMetaConverterHack:
     enabled: true
-  NoDepthWithGrace:
+  NoGraceWithDepth:
     enabled: true
   OldEnchanting:
     enabled: true
