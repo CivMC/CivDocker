@@ -101,7 +101,6 @@ hacks:
     enabled: true
     # The list of PotionEffectType's that you do not wish players to receive.
     naughty:
-      - DOLPHINS_GRACE
       - BAD_OMEN
       - SLOW_DIGGING
       - SLOW_FALLING
@@ -181,6 +180,8 @@ hacks:
     disableGapples: true
     disableEndGatewayTP: false
   ItemMetaConverterHack:
+    enabled: true
+  NoDepthWithGrace:
     enabled: true
   OldEnchanting:
     enabled: true
