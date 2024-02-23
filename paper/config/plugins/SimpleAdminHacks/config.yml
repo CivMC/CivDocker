@@ -574,13 +574,13 @@ hacks:
       EXPOSED_COPPER: 23
       WEATHERED_COPPER: 18
       OXIDIZED_COPPER: 14
-    skyBase: 1
+    skyBase: 12
     skyMaterials:
-      COBBLESTONE: 0
-      COPPER_BLOCK: 1
-      EXPOSED_COPPER: 1
-      WEATHERED_COPPER: 1
-      OXIDIZED_COPPER: 1
+      COBBLESTONE: 8
+      COPPER_BLOCK: 30
+      EXPOSED_COPPER: 34
+      WEATHERED_COPPER: 19
+      OXIDIZED_COPPER: 15
   CopperRail:
     enabled: true
     deoxidise: true
