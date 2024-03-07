@@ -1,0 +1,10 @@
+output:
+  url: "${CIV_INFLUX_HOST}"
+  organization: "${CIV_INFLUX_ORGANIZATION}"
+  bucket: "${CIV_INFLUX_BUCKET}"
+  interval: 10
+authentication:
+  scheme: "TOKEN"
+  username: "${CIV_INFLUX_USERNAME}"
+  password: "${CIV_INFLUX_PASSWORD}"
+  token: "${CIV_INFLUX_TOKEN}"

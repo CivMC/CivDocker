@@ -53,6 +53,14 @@ services:
       CIV_RABBITMQ_HOST: rabbitmq
       CIV_RABBITMQ_USERNAME: rabbitmq
       CIV_RABBITMQ_PASSWORD: rabbitmq
+
+      CIV_INFLUX_HOST: http://influxdb:8086
+      CIV_INFLUX_ORGANIZATION: influxdb
+      CIV_INFLUX_BUCKET: influxdb
+      CIV_INFLUX_USERNAME: influxdb
+      CIV_INFLUX_PASSWORD: influxdb
+      CIV_INFLUX_TOKEN: 4eYvsu8wZCJ6tKuE2sxvFHkvYFwSMVK0011hEEiojvejzpSaij86vYQomN_12au6eK-2MZ6Knr-Sax201y70w==
+
     volumes:
       - ./local/paper:/data
 
@@ -92,6 +100,28 @@ services:
     volumes:
       - ./provisioning/postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       - ./local/postgres:/var/lib/postgresql/data
+
+  influxdb:
+    image: influxdb:2.7.4-alpine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "influxdb:8086/api/v2/ping"]
+      interval: 60s
+      timeout: 10s
+      retries: 5
+    ports:
+      - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: influxdb
+      DOCKER_INFLUXDB_INIT_PASSWORD: influxdb
+      DOCKER_INFLUXDB_INIT_ORG: influxdb
+      DOCKER_INFLUXDB_INIT_BUCKET: influxdb
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: 4eYvsu8wZCJ6tKuE2sxvFHkvYFwSMVK0011hEEiojvejzpSaij86vYQomN_12au6eK-2MZ6Knr-Sax201y70w==
+      DOCKER_INFLUXDB_INIT_CLI_CONFIG_NAME: default2 # idk man
+
+    volumes:
+      - ./local/influxdb:/var/lib/influxdb2
 
   rabbitmq:
     image: rabbitmq:3.9.16-management
